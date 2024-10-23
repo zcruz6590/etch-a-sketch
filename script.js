@@ -1,11 +1,15 @@
-let object = document.createElement("div");
 let container = document.querySelector(".container")
 const rows = 16, cols = 16;
 
-object.style.backgroundColor = "cyan"
-object.style.border = "2px solid black"
-object.style.width = "50px"
-object.style.height = "50px"
-
-container.appendChild(object)
-
+for (let row = 0; row < rows; row++) {
+    for (let col = 0; col < cols; col++) {
+        //square 
+        let square = document.createElement("div");
+        square.classList.add("square") //creates square class to div element
+        square.style.backgroundColor = "cyan"
+        square.style.border = "1px solid black"
+        square.style.minwidth = "25px"
+        square.style.minheight = "25px"
+        container.appendChild(square)
+    }
+}

@@ -1,3 +1,19 @@
 .container {
-    display: flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: max-content;
+    max-height: fit-content;
+    margin: 0 auto;
+}
+
+
+
+.square {
+    flex-basis: calc(100%/16);
+    padding-top: calc(100%/16);
+    box-sizing: border-box;
+    max-width: calc(100%/16); /* each square in the 16x16 grid becomes 1/16 of the max-width of the container  */
+    max-height: calc(100%/16); /* each square in the 16x16 grid becomes 1/16 of the max-height of the container  */
 }
