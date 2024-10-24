@@ -25,9 +25,20 @@ function createGrid(numTiles) {
         let square = document.createElement("div");
         square.classList.add("square");
 
-        // Hover effect
+        // Hover effect to add random RGB colors
         square.addEventListener('mouseenter', () => {
-            square.style.backgroundColor = "orange";
+            var color = '#'; // hexadecimal starting symbol
+            var colorsHex = [
+                "FF5733", "33FF57", "3357FF", 
+                "FFFF33", "FF33FF", "33FFFF", 
+                "FF8333", "FF33A1", "33FF8A", 
+                "A133FF", "FFC300", "900C3F", 
+                "581845", "FFC0CB", "00FF7F", 
+                "4682B4", "DAA520", "2E8B57", 
+                "FF6347", "4169E1"
+            ]; //Set your colors here
+            color += colorsHex[Math.floor(Math.random() * colorsHex.length)];
+            square.style.background = color; // Setting the random color on your div element.
         });
 
         container.appendChild(square);
