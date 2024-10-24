@@ -3,17 +3,15 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    max-width: max-content;
-    max-height: fit-content;
+    max-width: 750px;
+    max-height: auto;
     margin: 0 auto;
 }
 
-
-
 .square {
-    flex-basis: calc(100%/16);
-    padding-top: calc(100%/16);
+    background-color: cyan;
+    border: 1px solid black;
     box-sizing: border-box;
-    max-width: calc(100%/16); /* each square in the 16x16 grid becomes 1/16 of the max-width of the container  */
-    max-height: calc(100%/16); /* each square in the 16x16 grid becomes 1/16 of the max-height of the container  */
+    flex-basis: calc(100% / var(--numTiles)); /* Use CSS variable for dynamic sizing */
+    aspect-ratio: 1 / 1; /* Ensures squares maintain a 1:1 ratio */
 }
